@@ -2,13 +2,21 @@
 node_modules/
 dist/
 build/
-*.log
+*.log*
 .env*
+coverage/
 
 # Docusaurus
 .docusaurus/
 .cache-loader/
 build/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
 
 # Universal
 .DS_Store
