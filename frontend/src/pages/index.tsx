@@ -22,9 +22,9 @@ function HomepageHeader() {
           <p className="hero__subtitle"></p>
           <div className={styles.buttons}>
             <Link
-              className="button button--secondary button--lg"
-              to="/docs/intro">
-              Explore
+              className={clsx('button button--secondary button--lg', styles.startButtonBlue)}
+              to="/docs/module1/chapter1">
+              Start Learning
             </Link>
           </div>
         </div>

@@ -61,3 +61,16 @@
     text-align: center; /* Center text on small screens */
   }
 }
+
+.startButtonBlue {
+  background-color: #1e5d88; /* Updated blue color */
+  border-color: #1e5d88;
+  color: white; /* Ensure text is visible on blue background */
+}
+
+/* Optional: for dark mode consistency */
+[data-theme='dark'] .startButtonBlue {
+  background-color: #1e5d88; /* Using the same dark blue for consistency */
+  border-color: #1e5d88;
+  color: white;
+}
