@@ -1,55 +1,50 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+Version change: (draft) → 1.0.0
+Modified principles: Content has been completely replaced with a new version based on user input.
+Added sections: All sections are new as per the user's request.
+Removed sections: All previous sections have been removed.
+Templates requiring updates:
+- .specify/templates/plan-template.md: ⚠ pending
+- .specify/templates/spec-template.md: ⚠ pending
+- .specify/templates/tasks-template.md: ⚠ pending
+Follow-up TODOs: None
+-->
 
-## Core Principles
+# Physical AI & Humanoid Robotics Textbook and Integrated Learning Platform (V1.0)
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+**Project Goal:** Create a Docusaurus-based textbook on Embodied Intelligence and Humanoid Robotics, deployed to GitHub Pages, integrated with a full-stack RAG chatbot, and featuring chapter-level Urdu localization.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+**Target Audience:** Advanced CS/Robotics Students.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### I. Core Content Principles
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+1.  **Focus:** Physical AI, Embodied Intelligence, and Humanoid Robotics (ROS 2, Gazebo/Unity, NVIDIA Isaac, VLA/LLMs).
+2.  **Structure:** 13 Chapters + Intro/Conclusion, covering all Weekly Breakdown topics.
+3.  **Style:** Academic, practical, with mandatory `Code Blocks` for ROS 2/Python and `[Image of X]` tags for complex visuals.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### II. Platform & Deployment Principles
 
-### [PRINCIPLE_6_NAME]
+1.  **Book Framework:** Docusaurus for static site generation.
+2.  **Hosting:** Deploy to GitHub Pages.
+3.  **Authoring Tools:** Use **Spec-Kit Plus** for workflow and **Claude Code** for content generation.
 
+### III. RAG Chatbot Principles (Base Functionality)
 
-[PRINCIPLE__DESCRIPTION]
+1.  **Integration:** Embedded within the Docusaurus site.
+2.  **Required Functions:**
+    *   Answer Q&A based **only** on the book content.
+    *   Answer Q&A based **only** on user-selected text on the page.
+3.  **Technical Stack:** OpenAI Agents/ChatKit SDKs (Agent), FastAPI (Backend), Neon Serverless Postgres (Source DB), Qdrant Cloud Free Tier (Vector DB).
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### IV. Localization Principle (Bonus Feature)
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+1.  **Requirement:** Implement a button/toggle at the **start of each chapter** for logged-in users.
+2.  **Action:** Translate the chapter content **in-place to Urdu**, with the ability to revert to the original English content.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### V. Governance
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+All subsequent specifications, plans, and tasks must adhere to these principles and the defined Technical Stack.
 
-## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
-
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+---
+**Version**: 1.0.0 | **Ratified**: 2025-12-15 | **Last Amended**: 2025-12-15
