@@ -1,6 +1,6 @@
 ---
 id: chapter7-isaac-sim
-title: Day 1: Isaac Sim & Synthetic Data
+title: "Day 1: Isaac Sim & Synthetic Data"
 sidebar_position: 7
 ---
 

@@ -1,6 +1,6 @@
 ---
 id: chapter9-nav2
-title: Day 3: Nav2 & Bipedal Movement
+title: "Day 3: Nav2 & Bipedal Movement"
 sidebar_position: 9
 ---
 
