@@ -33,7 +33,7 @@ function HomepageHeader() {
   );
 }
 
-export default function Home(): ReactNode {
+export default function Home(): ReactNode {                                
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
