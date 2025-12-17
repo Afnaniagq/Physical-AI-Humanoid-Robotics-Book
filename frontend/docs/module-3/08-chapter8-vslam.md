@@ -1,6 +1,6 @@
 ---
 id: chapter8-vslam
-title: Day 2: Isaac ROS & Visual SLAM (VSLAM)
+title: "Day 2: Isaac ROS & Visual SLAM (VSLAM)"
 sidebar_position: 8
 ---
 
