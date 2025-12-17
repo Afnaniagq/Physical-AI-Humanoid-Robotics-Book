@@ -1,0 +1,76 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; /* Space between image and content */
+}
+
+@media screen and (max-width: 996px) {
+  .heroSection {
+    flex-direction: column; /* Stack elements vertically on small screens */
+  }
+}
+
+.heroImageContainer {
+  flex: 1; /* Takes up half the space */
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0; /* Light background color */
+  padding: 20px; /* Add some padding around the image */
+  border-radius: 8px; /* Match the image border-radius */
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px; /* Optional: adds rounded corners to the image */
+}
+
+.heroContent {
+  flex: 1; /* Takes up half the space */
+  text-align: left; /* Align text to the left */
+}
+
+@media screen and (max-width: 996px) {
+  .heroContent {
+    text-align: center; /* Center text on small screens */
+  }
+}
+
+.startButtonBlue {
+  background-color: #1e5d88; /* Updated blue color */
+  border-color: #1e5d88;
+  color: white; /* Ensure text is visible on blue background */
+}
+
+/* Optional: for dark mode consistency */
+[data-theme='dark'] .startButtonBlue {
+  background-color: #1e5d88; /* Using the same dark blue for consistency */
+  border-color: #1e5d88;
+  color: white;
+}
