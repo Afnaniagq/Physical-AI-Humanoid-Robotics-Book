@@ -7,7 +7,6 @@ Auto-generated from all feature plans. Last updated: 2025-12-16
 - N/A (Content is static Markdown files) (003-ai-robot-brain-isaac-content-gen)
 - Python 3.8+ (for code examples), Markdown (for output format) + NVIDIA Isaac Sim, NVIDIA Isaac ROS, Nav2 (as topics of the guide) (002-isaac-ai-robot-guide)
 - N/A (Output is a static Markdown file) (002-isaac-ai-robot-guide)
-
 - JavaScript (ES6+), React + Docusaurus v2 (001-docusaurus-book-ui)
 
 ## Project Structure
