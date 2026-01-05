@@ -81,7 +81,7 @@ const Chatbot: React.FC = () => {
 
     try {
       // Call the backend API
-      const response = await fetch('http://localhost:8000/chat', {
+      const response = await fetch('https://afnim-rag-chatbot.hf.space/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
