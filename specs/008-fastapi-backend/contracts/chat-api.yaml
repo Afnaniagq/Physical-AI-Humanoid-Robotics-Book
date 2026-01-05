@@ -1,0 +1,117 @@
+# API Contracts: FastAPI Backend for AI Agent Integration
+
+## POST /chat
+
+### Description
+Endpoint to send user queries to the AI agent and receive formatted responses with preserved Markdown.
+
+### Request
+**Method**: POST
+**Path**: `/chat`
+**Content-Type**: `application/json`
+
+#### Request Body
+```json
+{
+  "message": "string (required) - The user's query or message, between 1 and 10000 characters",
+  "session_id": "string (required) - Unique identifier for the conversation session"
+}
+```
+
+#### Example Request
+```json
+{
+  "message": "What is embodied intelligence?",
+  "session_id": "sess_abc123xyz"
+}
+```
+
+### Response
+**Success Response (200 OK)**
+```json
+{
+  "response": "string (required) - The AI agent's response with Markdown formatting preserved",
+  "session_id": "string (required) - The session identifier from the request",
+  "source_urls": "array of strings (optional) - List of source URLs referenced in the response",
+  "timestamp": "string (required) - ISO 8601 timestamp of when the response was generated"
+}
+```
+
+#### Example Success Response
+```json
+{
+  "response": "**Embodied intelligence** refers to AI systems that interact with the physical world through sensors and actuators. This concept is crucial for humanoid robotics as it emphasizes the importance of environmental interaction in developing intelligent behavior.",
+  "session_id": "sess_abc123xyz",
+  "source_urls": [
+    "https://example.com/embodied-intelligence",
+    "https://example.com/humanoid-robotics"
+  ],
+  "timestamp": "2025-12-28T10:30:00Z"
+}
+```
+
+**Error Response (400 Bad Request)**
+```json
+{
+  "error": "string (required) - Descriptive error message",
+  "status_code": 400,
+  "timestamp": "string (required) - ISO 8601 timestamp",
+  "details": {
+    "field": "string - Field that caused the error",
+    "reason": "string - Reason for the validation failure"
+  }
+}
+```
+
+#### Example 400 Response
+```json
+{
+  "error": "Invalid request parameters",
+  "status_code": 400,
+  "timestamp": "2025-12-28T10:30:00Z",
+  "details": {
+    "field": "message",
+    "reason": "Message cannot be empty"
+  }
+}
+```
+
+**Error Response (500 Internal Server Error)**
+```json
+{
+  "error": "string (required) - Descriptive error message",
+  "status_code": 500,
+  "timestamp": "string (required) - ISO 8601 timestamp",
+  "details": "object (optional) - Additional error details for debugging"
+}
+```
+
+#### Example 500 Response
+```json
+{
+  "error": "Internal server error occurred while processing the request",
+  "status_code": 500,
+  "timestamp": "2025-12-28T10:30:00Z",
+  "details": {
+    "type": "AgentError",
+    "message": "Failed to get response from AI model"
+  }
+}
+```
+
+### Headers
+- **Request Headers**:
+  - `Content-Type: application/json` (required)
+
+- **Response Headers**:
+  - `Content-Type: application/json`
+
+### Security
+- No authentication required for initial implementation
+- Rate limiting may be implemented later based on session_id
+
+### Validation
+- Request body must conform to the specified schema
+- Message field must be between 1 and 10000 characters
+- Session_id must be a valid string identifier
+- All string fields are trimmed of leading/trailing whitespace
